@@ -1,0 +1,31 @@
+
+module ex1{
+
+struct Response {
+	long id;
+	string ennonce;
+	boolean verite;
+};
+
+typedef Response rep;
+typedef sequence <rep> reps;
+ 
+struct Question{
+	long id;
+	string ennonce;
+	reps responsesList;
+
+};
+
+
+interface App{
+	typedef Question qs ;
+	typedef sequence <qs> qlist;
+
+	qlist getquestions();
+	boolean verifierrep(in long idrep, in long idQuest);
+
+};
+
+};
+
