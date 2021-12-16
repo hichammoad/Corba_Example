@@ -29,7 +29,7 @@ public class MainClient {
 			for (Response r : q.responsesList) {
 				System.out.println(r.id + " " + r.ennonce);
 			}
-			System.out.println("your answer? (answer position [0,1,2..])");
+			System.out.println("your answer? (answer id [21, 22, ...])");
 			int idr = sc.nextInt();
 			System.out.println(app.verifierrep(idr, q.id));
 		}
